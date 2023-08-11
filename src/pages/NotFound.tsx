@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function NotFound() {
-  return <div>NotFound</div>;
+  return <div className="grid h-full place-content-center">Page Not Found</div>;
 }
