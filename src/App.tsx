@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import CountryPage from "./pages/CountryPage";
 import NotFound from "./pages/NotFound";
 import { CountryDataType } from "./types/CountryDataType";
+import axios from "axios";
 
 export interface isDarkModeType {
   isDarkMode: boolean;
@@ -27,8 +28,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://restcountries.com/v3.1/all");
-        countryData.current = await response.json();
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        countryData.current = response.data;
 
         //add tags for search function
         if (!countryData.current) return;
