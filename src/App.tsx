@@ -80,19 +80,18 @@ function App() {
       setIsLoading(false);
     }, 2000);
 
+    //setup dark mode
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setIsDarkMode(true);
+    }
+
+    //setup data
+    fetchData();
+
     return () => {
-      //setup dark mode
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setIsDarkMode(true);
-      }
-
-      //setup data
-      fetchData();
-
-      //cleanup
       clearTimeout(letApiLoad);
     };
   }, []);
