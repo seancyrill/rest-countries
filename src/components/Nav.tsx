@@ -17,6 +17,24 @@ export default function Nav({ isDarkMode, setIsDarkMode }: NavProps) {
           Where in the world?
         </h1>
       </Link>
+
+      <div>
+        <Link
+          to={
+            "https://www.frontendmentor.io/solutions/rest-countries-with-react-typescript-tailwind-uFgZmR1Tgp"
+          }
+          target="_blank"
+        >
+          {`Challenge`}
+        </Link>
+        {` by Frontend Mentor. `}
+        <Link
+          to={"https://github.com/seancyrill/rest-countries"}
+        >{`Coded`}</Link>
+        {` by `}
+        <Link to={"/"}>{`Sean.`}</Link>
+      </div>
+
       <button
         onClick={() => setIsDarkMode((prev) => !prev)}
         className="flex items-center gap-1 py-4 text-sm hover:opacity-70"

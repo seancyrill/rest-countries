@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  a {
+    @apply font-bold underline;
+  }
+
   :root {
     --DMElements: 209 23% 22%;
     --DMBackground: 207 26% 17%;
