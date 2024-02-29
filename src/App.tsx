@@ -91,6 +91,7 @@ function App() {
     //setup data
     fetchData();
 
+    //cleanup
     return () => {
       clearTimeout(letApiLoad);
     };
