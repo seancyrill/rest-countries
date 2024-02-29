@@ -14,7 +14,7 @@ export default function CountryCard({
   isDarkMode,
 }: CountryCardProps) {
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/${name.common}`}>
       <article
         className={`mx-auto w-full max-w-[270px] cursor-pointer rounded-md pb-6 drop-shadow-lg hover:brightness-110 ${
           isDarkMode ? "bg-DMElements text-white" : "bg-Elements text-LMText"

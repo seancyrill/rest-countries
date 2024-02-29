@@ -123,7 +123,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/:id"
+          path="/:name"
           element={
             <CountryPage
               isDarkMode={isDarkMode}
